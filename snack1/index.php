@@ -37,8 +37,12 @@ $array_squadre = [
 <body>
 
 <?php
-    for ($i=; $i < 3; $i++) { ?>
-        <p><?php echo $array_squadre["squadra_casa"] - $array_squadre["squadra_ospite"] | $array_squadre["punti_casa"] - $array_squadre["punti_ospite"] ?></p>
+    for ($i=0; $i < count($array_squadre); $i++) { 
+        $partita = $array_squadre[$i];
+        
+        ?>
+        
+        <p><?php echo  $partita["squadra_casa"]?> - <?php echo $partita["squadra_ospite"] ?> | <?php $partita["punti_casa"]?> - <?php $parita["punti_ospite"] ?></p>
     <?php }
     ?>
 
