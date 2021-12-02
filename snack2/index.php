@@ -2,12 +2,17 @@
 
 <?php 
 
+$name = $_GET['name'];
+$email = $_GET['email'];
+$age = $_GET['age'];
 
-$email = $_GET('email');
+var_dump(strpos($email, '@'), strpos($email, '.'));
 
-
-
-
+if(strpos($email, '@') && strpos($email, '.') ){
+    echo 'ok'
+}else{
+    echo 'ko'
+};
 
 
 
