@@ -1,6 +1,6 @@
 <?php
 
-$array = [
+
     $posts = [
 
         '10/01/2019' => [
@@ -40,8 +40,10 @@ $array = [
             ]
         ],
     ];
-];
 
+    $keys = array_keys($posts);
+
+      
 
 ?>
 
@@ -54,14 +56,14 @@ $array = [
     <title>Document</title>
 </head>
 <body>
-<?php
-    for ($i=0; $i < count($array[$posts]); $i++) { 
-        $post = $posts[$i];
-        
-        ?>
-        
-        <p><?php echo  $post?> </p>
-    <?php }
-    ?>
+      <?php for ($i=0; $i < count($keys) ; $i++) { 
+        $key = $keys[$i];
+        echo $key . '<br>';
+
+        for ($j=0; $j < count($posts[$key]) ; $j++) { 
+            $post = $posts[$key][$j];
+        }
+      }?>
 </body>
 </html>
+

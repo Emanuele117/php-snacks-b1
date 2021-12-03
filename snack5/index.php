@@ -4,7 +4,7 @@ $paragrafo = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolore
 Sed voluptatibus repudiandae enim inventore. molestiae est molestias voluptatem perspiciatis. maiores obcaecati fuga voluptas expedita esse, nihil labore tenetur praesentium dolores atque eius at incidunt? Perspiciatis numquam quam eveniet ratione?
 Veritatis quas magnam unde, officia iusto rerum incidunt, itaque similique explicabo at suscipit perferendis repudiandae totam. hic reprehenderit asperiores accusantium quos nihil provident saepe accusamus eius? Ipsa nostrum praesentium nulla.";
 
-$arr = explode(".",$paragrafo);
+$paragrafi = explode(".",$paragrafo);
 
 
 ?>
@@ -18,12 +18,8 @@ $arr = explode(".",$paragrafo);
     <title>Document</title>
 </head>
 <body>
-    <p><?php echo $arr[0] ?></p>
-    <p><?php echo $arr[1] ?></p>
-    <p><?php echo $arr[2] ?></p>
-    <p><?php echo $arr[3] ?></p>
-    <p><?php echo $arr[4] ?></p>
-    <p><?php echo $arr[5] ?></p>
-    <p><?php echo $arr[6] ?></p>
+    <?php for ($i=0; $i < count($paragrafi); $i++) : ?> 
+        <p><?= $paragrafi[$i]; ?></p>
+    <?php endfor; ?>
 </body>
 </html>

@@ -1,23 +1,23 @@
 <?php
 
-$array_squadre = [
+$squadre = [
     [
         'squadra_casa' => 'Roma',
         'squadra_ospite' => 'inter',
-        'punti_casa' => 55,
-        'punti_ospite' => 60,
+        'punti_casa' => rand(1, 100),
+        'punti_ospite' => rand(1, 100),
     ],
     [
         'squadra_casa' => 'lazio',
         'squadra_ospite' => 'Samp',
-        'punti_casa' => 50,
+        'punti_casa' => rand(1, 100),
         'punti_ospite' => 20,
     ],
     [
         'squadra_casa' => 'fiorentina',
         'squadra_ospite' => 'torino',
-        'punti_casa' => 25,
-        'punti_ospite' => 35,
+        'punti_casa' => rand(1, 100),
+        'punti_ospite' => rand(1, 100),
     ]
 ]
 
@@ -37,12 +37,12 @@ $array_squadre = [
 <body>
 
 <?php
-    for ($i=0; $i < count($array_squadre); $i++) { 
-        $partita = $array_squadre[$i];
+    for ($i=0; $i < count($squadre); $i++) { 
+        $squadra = $squadre[$i];
         
         ?>
         
-        <p><?php echo  $partita["squadra_casa"]?> - <?php echo $partita["squadra_ospite"] ?> | <?php $partita["punti_casa"]?> - <?php $parita["punti_ospite"] ?></p>
+        <p><?php echo  $squadra["squadra_casa"]?> - <?php echo $squadra["squadra_ospite"] ?> | <?php $squadra["punti_casa"]?> - <?php $squadra["punti_ospite"] ?></p>
     <?php }
     ?>
 
